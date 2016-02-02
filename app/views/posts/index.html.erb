@@ -1,0 +1,14 @@
+<h1>Welcome to blogs</h1>
+
+<%= link_to "Add a New Post", new_post_path %>
+
+<div class="post_list">
+  <% @posts.each do | post | %>
+  <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
+    <ul>
+      <li>
+        <%= post.blog_post %>
+      </li>
+    </ul>
+  <% end %>
+</div>

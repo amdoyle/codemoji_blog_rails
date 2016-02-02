@@ -1,0 +1,13 @@
+<div class="blog_form">
+  <%= form_for @post do | post |%>
+     <div class="blog_form_input">
+      <%= post.label :title, "Add Title" %>
+      <%= post.text_field :title %>
+    </div>
+    <div class="blog_form_input">
+      <%= post.label :blog_post, "Blog Post" %>
+      <%= post.text_area :blog_post %>
+    </div>
+      <%= post.submit %>
+  <% end %>
+</div>

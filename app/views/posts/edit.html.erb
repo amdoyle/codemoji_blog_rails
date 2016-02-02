@@ -1,0 +1,10 @@
+<h1>Edit Your Post</h1>
+
+<p>
+<%= link_to "Home", posts_path %>
+<%= link_to "Add a New Post", new_post_url %> |
+<%= link_to "Edit Post", edit_post_path %> |
+<%= link_to "Delete Post", @post, method: :delete, data: {confirm: "Do you want to destory this post for ever and ever?"} %>
+</p>
+
+<%= render "form" %>
