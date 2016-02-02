@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user && user.authenticate(params[:password])
-      session[:user_id] =user.id
-      redirect_to posts_path, notice: "You're Logged In"
+      session[:user_id] = user.id
+      redirect_to posts_url, notice: "You're Logged In"
     else
       render :new
     end
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to posts_path, notice: "Logged Out!"
+    redirect_to posts_url, notice: "Logged Out!"
   end
 
 end
