@@ -3,12 +3,13 @@
 <%= link_to "Add a New Post", new_post_path %>
 
 <div class="post_list">
+
   <% @posts.each do | post | %>
+
   <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
-    <ul>
-      <li>
-        <%= post.blog_post %>
-      </li>
-    </ul>
+
+    <p><%= post.blog_post %></p>
+
   <% end %>
+
 </div>
