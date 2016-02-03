@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to posts_path, notice: "You're Signed Up!"
     else
-      reload :edit
+      render :new
     end
   end
 
