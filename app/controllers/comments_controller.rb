@@ -1,15 +1,17 @@
 class CommentsController < ApplicationController
 
+  before_action :load_post
+
   def new
     @comment = Comment.new
   end
 
   def create
 
-    @comment = Comment.new(comment_params)
+    @comment = @post.comments.build(comment_params)
 
     if @comment.save
-      redirect_to post_path(@post)
+      redirect_to post_path(@post), notice: "You have successfully commented on this blog post"
     else
       render :new
     end
@@ -27,7 +29,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     if comment.update_attributes(comment_params)
-      redirect_to post_path(@post)
+      redirect_to post_path(@post), notice: "You have successfully updated your comment"
     else
       render :edit
     end
@@ -39,7 +41,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     @comment.destory
-    
+
     redirect_to post_path(@post)
   end
 
@@ -49,5 +51,8 @@ class CommentsController < ApplicationController
     params.require(:comment).require(:comment)
   end
 
+  def load_post
+    @post = Post.find(params[:post_id])
+  end
 
 end

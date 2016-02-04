@@ -20,6 +20,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+
+    if current_user
+      @comment = @post.comments.build
+    end
+
+  end
 
   def update
 

@@ -14,3 +14,19 @@
       </li>
     </ul>
 </div>
+
+<div>
+
+  <h3>comments</h3>
+
+    <% @post.comments.each do |comment| %>
+      <p>
+        <%= comment.comment %> <br />
+        <% if comment.user != nil %>
+          <!-- Comment written by: <%= comment.user.first_name %> -->
+          added on: <%= comment.created_at %>
+        <% end %>
+      </p>
+    <% end %>
+
+</div>
