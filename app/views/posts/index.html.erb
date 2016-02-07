@@ -1,15 +1,18 @@
-<h1>Welcome to blogs</h1>
+<div class="header">
+  <h1>welcome to that girl blogs</h1>
+</div>
 
-<%= link_to "Add a New Post", new_post_path %>
+<div id="body_content">
 
-<div class="post_list">
+  <div class="post_list">
 
-  <% @posts.each do | post | %>
+    <% @posts.each do | post | %>
 
-  <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
+    <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
 
-    <p><%= post.blog_post %></p>
+      <p><%= post.blog_post %></p>
 
-  <% end %>
+    <% end %>
+  </div>
 
 </div>

@@ -1,3 +1,80 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Work+Sans:400,100,200,300,500,600,700,800);
+
+@import "resets";
+
+@mixin links{
+  color: $highlight;
+  font: $sans;
+  font-weight: 700;
+}
+
+$serif: "Droid Serif", serif;
+$sans: "Work Sans", sans-serif;
+$primarycolor: rgb(188, 212, 118);
+$bodyfont: rgb(81, 84, 73);
+$highlight: rgb(204, 30, 117);
+$corners: 5px;
+
+html {
+  padding: 25px;
+  margin: 25px;
+  border: 1px solid $bodyfont;
+  border-radius: $corners;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 50px;
+  color: $primarycolor;
+}
+
+p, a {
+  font-family: $sans;
+  color: $bodyfont;
+}
+
+
+a:hover {
+  @include links
+}
+
+.header{
+  background-color: rgba(251, 236, 203, .5);
+  padding: 25px;
+  margin-top: -25px;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-bottom: 25px;
+  border-top-right-radius: $corners;
+  border-top-left-radius: $corners;
+  float: left;
+  width: 100%;
+  h1 {
+    font-style: italic;
+    font-variant: small-caps;
+    text-align: center;
+  }
+}
+
+#nav{
+  z-index: 1;
+  padding-top: -125px;
+}
+
+#nav ul li{
+  list-style-type: none;
+  display: inline;
+  text-decoration: none;
+}
+
+#nav a{
+  text-decoration: none;
+
+}
+
+#body_content {
+}

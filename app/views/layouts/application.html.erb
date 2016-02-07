@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<div id="nav">
+ <ul>
+    <li> <%= link_to "Home", posts_path %></li> |
+    <li> <%= link_to "Add a New Post", new_post_url %></li> |
+    <li> <%= link_to "Delete Post", @post, method: :delete, data: {confirm: "Do you want to destory this post for ever and ever?"} %></li>
+  </ul>
+
+
+</div>
 <% flash.each do |name, message| %>
   <%= content_tag :div, message, class: name %>
 <% end %>
