@@ -1,6 +1,6 @@
 # Codemoji Blog 
 
 ###Description
-*Creating a rails based blog app
+* Creating a rails based blog app
 
 
