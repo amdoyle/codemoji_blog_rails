@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    current_user = User.find_by(email: params[:email])
 
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    if current_user && current_user.authenticate(params[:password])
+      session[:user_id] = current_user.id
       redirect_to posts_url, notice: "You're Logged In"
     else
       render :new
