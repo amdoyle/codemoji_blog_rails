@@ -1,18 +1,15 @@
-<div class="header">
-  <h1>welcome to the codemoji</h1>
-</div>
+<div class ="page">
+  <div id="body_content">
 
-<div id="body_content">
 
-  <div class="post_list">
+    <div class="post_list">
 
-    <% @posts.each do | post | %>
+      <% @posts.each do | post | %>
 
-    <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
+      <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
 
-      <p><%= post.blog_post %></p>
+        <p><%= post.blog_post %></p>
 
-    <% end %>
+      <% end %>
   </div>
-
 </div>

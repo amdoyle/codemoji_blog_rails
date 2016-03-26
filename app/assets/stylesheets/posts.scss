@@ -1,3 +1,50 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav{
+  float: left;
+  margin-top: 250px;
+  position: fixed;
+}
+
+.jumbotron {
+  height: 250px;
+  text-align: center;
+  padding-top: 1%;
+  margin-top: 1rem;
+  & h1{
+    padding-top:5%;
+  }
+}
+
+.sign-out {
+  float: right;
+  padding-right: 2%;
+  margin-top: -1rem;
+}
+
+.login {
+  float: right;
+  padding-right: 2%;
+  margin-top: -.8rem;
+}
+
+.page{
+  width: 75%;
+  margin-left: 25%;
+  & h1{
+    font-size: 2rem;
+    padding: 1%;
+  }
+  & p {
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
+   & .btn {
+    margin-top: 2%;
+  }
+  & .login {
+    float: center;
+  }
+}
