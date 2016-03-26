@@ -6,6 +6,7 @@
   float: left;
   margin-top: 250px;
   position: fixed;
+  font-family: $login-stack;
 }
 
 .jumbotron {
@@ -15,6 +16,9 @@
   margin-top: 1rem;
   & h1{
     padding-top:5%;
+    font-family: $fancy-stack;
+    font-weight: 700;
+    font-size: 6rem;
   }
 }
 
@@ -27,7 +31,8 @@
 .login {
   float: right;
   padding-right: 2%;
-  margin-top: -.8rem;
+  margin-top: -1rem;
+  font-family: $login-stack;
 }
 
 .page{
@@ -36,10 +41,14 @@
   & h1{
     font-size: 2rem;
     padding: 1%;
+    font-family: $fancy-stack;
+    font-weight: 400;
+
   }
   & p {
     padding-top: 2%;
     padding-bottom: 1%;
+    font-family: $login-stack;
   }
    & .btn {
     margin-top: 2%;

@@ -1,0 +1,99 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Work+Sans:400,100,200,300,500,600,700,800);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+$serif: "Droid Serif", serif;
+$sans: "Work Sans", sans-serif;
+$primarycolor: rgb(188, 212, 118);
+$bodyfont: rgb(81, 84, 73);
+$highlight: rgb(204, 30, 117);
+$corners: 5px;
+
+html {
+  padding: 25px;
+  margin: 25px;
+  border: 1px solid $bodyfont;
+  border-radius: $corners;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 50px;
+  color: $primarycolor;
+}
+
+p, a {
+  font-family: $sans;
+  color: $bodyfont;
+}
+
+@mixin links{
+  color: $highlight;
+  font: $sans;
+  font-weight: 700;
+}
+
+a:hover {
+  @include links
+}
+
+.header{
+  background-color: rgba(251, 236, 203, .5);
+  padding: 25px;
+  margin-top: -25px;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-bottom: 25px;
+  border-top-right-radius: $corners;
+  border-top-left-radius: $corners;
+  h1 {
+    font-style: italic;
+  }
+
+}
