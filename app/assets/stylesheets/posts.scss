@@ -24,8 +24,10 @@
 
 .sign-out {
   float: right;
+  width: 98px;
   padding-right: 2%;
   margin-top: -1rem;
+  font-family: $login-stack;
 }
 
 .login {
@@ -35,9 +37,19 @@
   font-family: $login-stack;
 }
 
+.current_user {
+  float: right;
+  width: 200px;
+  margin-top: -1rem;
+  margin-right:95px;
+  font-family: $login-stack;
+}
+
 .page{
-  width: 75%;
-  margin-left: 25%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+;
   & h1{
     font-size: 2rem;
     padding: 1%;

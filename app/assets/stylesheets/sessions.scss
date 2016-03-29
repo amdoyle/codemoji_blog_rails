@@ -1,3 +1,25 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.sign-out {
+  float: right;
+  width: 98px;
+  padding-right: 2%;
+  margin-top: -1rem;
+  font-family: $login-stack;
+}
+
+.login {
+  float: right;
+  padding-right: 2%;
+  margin-top: -1rem;
+  font-family: $login-stack;
+}
+
+.current_user {
+  float: right;
+  width: 189px;
+  margin-top: -1rem;
+  margin-right: 95px;
+  font-family: $login-stack;
+}
