@@ -4,21 +4,29 @@
 
 .navbar{
   float: left;
-  margin-top: -15px;
+  padding-bottom: 0px;
   position: fixed;
   width: 100%;
   z-index: 100;
   background-color: blue;
   font-family: $login-stack;
+  & p{
+    float: right;
+    padding-bottom: 3%;
+    font-family: $login-stack;
+  }
+  & li {
+    padding: 3% 0%;
+  }
 }
 
 .jumbotron {
-  height: 199px;
+  height: 200px;
   text-align: center;
   padding-top: 1%;
   margin-top: 1rem;
   & h1{
-    padding-top:12%;
+    padding-top:15%;
     font-family: $fancy-stack;
     font-weight: 700;
     font-size: 3rem;
