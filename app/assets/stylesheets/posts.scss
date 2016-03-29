@@ -1,7 +1,7 @@
 // Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
+// They will automatically be included inscreen application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@media screen{
 .navbar{
   float: left;
   padding-bottom: 0px;
@@ -45,15 +45,20 @@
     font-weight: 400;
 
   }
-  & p {
-    padding-top: 2%;
-    padding-bottom: 1%;
-    font-family: $login-stack;
+    & p {
+      padding-top: 2%;
+      padding-bottom: 1%;
+      font-family: $login-stack;
+    }
+     & .btn {
+      margin-top: 2%;
+    }
+    & .login {
+      float: center;
+    }
   }
-   & .btn {
-    margin-top: 2%;
-  }
-  & .login {
-    float: center;
-  }
+}
+
+@media (min-size:750px){
+
 }
