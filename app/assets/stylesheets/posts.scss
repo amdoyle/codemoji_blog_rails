@@ -3,46 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .nav{
-  float: left;
-  margin-top: 250px;
-  position: fixed;
+  // float: left;
+  // margin-top: 250px;
+  // position: fixed;
   font-family: $login-stack;
 }
 
 .jumbotron {
-  height: 250px;
-  text-align: center;
-  padding-top: 1%;
-  margin-top: 1rem;
-  & h1{
-    padding-top:5%;
-    font-family: $fancy-stack;
-    font-weight: 700;
-    font-size: 6rem;
-  }
-}
-
-.sign-out {
-  float: right;
-  width: 98px;
-  padding-right: 2%;
-  margin-top: -1rem;
-  font-family: $login-stack;
-}
-
-.login {
-  float: right;
-  padding-right: 2%;
-  margin-top: -1rem;
-  font-family: $login-stack;
-}
-
-.current_user {
-  float: right;
-  width: 200px;
-  margin-top: -1rem;
-  margin-right:95px;
-  font-family: $login-stack;
+  // height: 250px;
+  // text-align: center;
+  // padding-top: 1%;
+  // margin-top: 1rem;
+  // & h1{
+  //   padding-top:5%;
+  //   font-family: $fancy-stack;
+  //   font-weight: 700;
+  //   font-size: 6rem;
+  // }
 }
 
 .page{

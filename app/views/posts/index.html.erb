@@ -7,7 +7,7 @@
         suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
         eum iriure dolor in hendrerit in.</p>
     </div>
-
+  <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-3">
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -26,17 +26,5 @@
     </div>
   </div>
   </div>
-
-
-
-    <div class="post_list">
-
-      <% @posts.each do | post | %>
-
-      <h3>  <%= link_to post.title, "posts/#{post.id}" %> </h3>
-
-        <p><%= post.blog_post %></p>
-
-      <% end %>
   </div>
 </div>
