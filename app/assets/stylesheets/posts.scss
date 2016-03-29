@@ -8,29 +8,40 @@
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: blue;
+  background-color: transparentize($black, .3);
   font-family: $login-stack;
+  color: $blue;
   & p{
     float: right;
     padding-bottom: 3%;
     font-family: $login-stack;
+    color: $blue
   }
   & li {
     padding: 3% 0%;
+  }
+  & a {
+    font-family: $login-stack;
+    color: $blue;
   }
 }
 
 .jumbotron {
   height: 200px;
   text-align: center;
-  padding-top: 1%;
-  margin-top: 1em;
+  padding-top: 2%;
+  background-color: transparentize($blue, .8  );
   & h1{
     padding-top:15%;
     font-family: $fancy-stack;
     font-weight: 700;
     font-size: 3em;
+    color: $black;
   }
+}
+
+.codemoji{
+  color: $gold;
 }
 
 }
