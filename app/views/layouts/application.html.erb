@@ -48,13 +48,13 @@
 
 
 
-<% flash.each do |name, message| %>
-  <%= content_tag :div, message, class: name %>
-<% end %>
 
 <div class="jumbotron">
   <h1>welcome to the <span class="codemoji">codemoji</span?</h1>
 </div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
