@@ -24,6 +24,11 @@
     font-family: $login-stack;
     color: $blue;
   }
+  & a:hover{
+    text-decoration: none;
+    color: $gold;
+  }
+
 }
 
 .jumbotron {
