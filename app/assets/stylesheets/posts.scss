@@ -159,11 +159,11 @@ p {
   .nav {
     padding-top: 0%;
     margin-top: 0%;
-    padding-left: 6%;
   }
 
   .navbar{
     padding-top: 1%;
+    margin-left: -3%;
     & p{
       padding-bottom: 1%;
     }
@@ -181,14 +181,12 @@ p {
 }
 
 @media (min-width:1500px){
-  .nav {
-    padding-top: 0%;
-    margin-top: 0%;
-    padding-left: 6%;
+  .nav{
+    margin-left: -3%;
   }
   .navbar{
     padding-top: 0%;
-    padding-left: 1%;
+    margin-left: -3%;
     & p{
       padding-top: 3%;
       padding-bottom: 1%;
@@ -210,6 +208,12 @@ p {
 }
 
 @media (min-width:2000px){
+
+  .navbar{
+    margin-left: -4%;
+    margin-right: -4%;
+    width: 102%;
+  }
   .jumbotron {
     height: 475px;
     & h1{
