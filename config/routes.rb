@@ -2,13 +2,11 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
+  devise_for :users, controllers: {sessions:"users/sessions"}
+
   resources :posts do
     resources :comments, only: [:new, :create, :edit, :update, :destroy]
   end
-
-  resources :users
-
-  resources :sessions, only: [:new, :create, :destroy]
 
 
 

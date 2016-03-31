@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  has_secure_password
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :confirmable, :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts
 
@@ -7,6 +10,6 @@ class User < ActiveRecord::Base
 
   validates :email, confirmation: true
 
-  validates :first_name, :last_name, presence: true, length: {minimum: 3}
+  validates :first_name, :last_name, :username, presence: true, length: {minimum: 3}
 
 end
