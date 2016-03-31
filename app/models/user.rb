@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
 
   validates :email, confirmation: true
 
-  validates :first_name, :last_name, :username, presence: true, length: {minimum: 3}
+  validates :first_name, :last_name, :username, presence: true
 
 end
