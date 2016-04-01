@@ -4,14 +4,16 @@ before_filter :configure_sign_in_params, only: [:create]
   # GET /resource/sign_in
   def new
     super
-    if current_user != nil
-      redirect_to new_post_url
-    end
   end
 
   # POST /resource/sign_in
   def create
     super
+     session[:current_user_id] = @user.id
+  #  if user = User.authenticate(params[:username], params[:password])
+  #    session[:current_user_id] = user.id
+  #    redirect_to root_url
+  #  end
   end
 
   # DELETE /resource/sign_out
