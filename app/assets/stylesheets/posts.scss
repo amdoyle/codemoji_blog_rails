@@ -20,7 +20,7 @@
   & p{
     float: right;
     padding-top: 2%;
-    padding-right: 0px;
+    padding-right: 0%;
     margin-right: -18px;
     font-family: $login-stack;
     color: $blue
@@ -133,8 +133,10 @@ p {
   .navbar{
     padding-top: 1%;
     padding-bottom: 1%;
-    & p{
-      padding-bottom: 3%;
+    margin-left: -5%;
+    width: 110%;
+    & p {
+      padding-right: 11%;
     }
     & li {
       padding: 2% 0%;

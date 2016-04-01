@@ -23,3 +23,78 @@
   // margin-right: 95px;
   font-family: $login-stack;
 }
+
+h2 {
+  text-align: center;
+  padding-bottom: 3%;
+ }
+
+.actions {
+  padding-top: 4%;
+  margin-left: 48%;
+  padding-left: 0%;
+}
+.login-field{
+  margin: auto;
+  display: table;
+  padding-bottom: 1%;
+}
+
+input#user_remember_me {
+    margin-right: 6%;
+    margin-left: -6%;
+    display: inline-block;
+}
+
+.left{
+  display: table;
+  margin-left: 30%;
+}
+
+.right{
+  display: table;
+  margin-left: 30%;
+}
+
+@media (min-width:750px){
+  .left{
+    margin-left: 20%;
+    margin-right: -20%;
+  }
+
+  .right{
+    margin-left: 4%;
+    margin-right: -9%;
+  }
+}
+
+
+@media (min-width:1000px){
+  .left{
+    margin-left: 30%;
+    margin-right: -33%
+  }
+
+  .right{
+    margin-left: 5%;
+  }
+}
+
+@media (min-width:1500px){
+  .left {
+    margin-left: 33%;
+    margin-right: -37%;
+  }
+
+  .right {
+    margin-left: 6%;
+    margin-right: -6%;
+  }
+}
+
+@media (min-width:2000px){
+  .left {
+    margin-left: 40%;
+    margin-right: -45%;
+  }
+}
