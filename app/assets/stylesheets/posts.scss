@@ -101,8 +101,8 @@ h1 {
     background-color: $black
   }
 }
-/* home page */
 
+/* home page */
 .jumbotron {
   height: 200px;
   text-align: center;
@@ -142,12 +142,14 @@ p {
     margin: 0 0 0 -40%;
     & h1 {
       text-align: center;
+      font-family: $login-stack;
     }
   }
 
 /* New post */
 form#new_post {
-    padding-top: 5%;
+  font-family: $login-stack;
+  padding-top: 5%;
   & label {
     display: block;
     padding-bottom: 2%;
@@ -228,6 +230,11 @@ form#new_post {
       padding-bottom: 0%;
     }
   }
+
+  .navbar-toggle {
+    padding-top: 2%;
+  }
+
   .jumbotron {
     height: 300px;
     & h1{
@@ -268,12 +275,22 @@ form#new_post {
       margin-left: -15px;
     }
   }
+
+  .navbar-toggle {
+    padding-top: 3%;
+  }
+
   .jumbotron {
     height: 400px;
     & h1{
       font-size: 7em;
       font-family: $fancy-stack;
     }
+  }
+
+  .container-fluid {
+    padding-left: 6.9375rem;
+    padding-right: 6.9375rem;
   }
 }
 
