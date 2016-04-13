@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def new
@@ -24,15 +24,12 @@ class PostsController < ApplicationController
   end
 
   def show
-
     if current_user
       @comment = @post.comments.build
     end
-
   end
 
   def update
-
     if @post.update_attributes(post_params)
       redirect_to post_path(@post)
     else
@@ -41,7 +38,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
     @post.delete
     redirect_to posts_path
   end

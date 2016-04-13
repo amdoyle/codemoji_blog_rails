@@ -176,6 +176,14 @@ form#new_post {
 
 }
 
+/* show page */
+.post{
+  & a{
+    font-size: 3em;
+    z-index: 1000;
+
+  }
+}
 
 
 @media (min-width:750px){
