@@ -3,12 +3,12 @@ class CommentsController < ApplicationController
   before_action :load_post
 
   def new
-    @comment = Comment.new
+    @comment = @post.comments.new
   end
 
   def create
-
-    @comment = @post.comments.build(comment_params)
+    @comment = @post.comments.new(comment_params)
+    @comment.user = current_user
 
     if @comment.save
       redirect_to post_path(@post), notice: "You have successfully commented on this blog post"
@@ -18,8 +18,7 @@ class CommentsController < ApplicationController
 
   end
 
-  def edit
-
+  def editx
     @comment = Comment.find(params[:id])
 
   end
@@ -48,7 +47,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).require(:comment)
+    params.require(:comment).permit(:comment, :blog_id)
   end
 
   def load_post

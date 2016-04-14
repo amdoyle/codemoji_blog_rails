@@ -15,7 +15,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-
     if @post.save
       redirect_to posts_url
     else
@@ -24,9 +23,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    if current_user
-      @comment = @post.comments.build
-    end
+    @comment = @post.comments.build
   end
 
   def update
