@@ -1,24 +1,25 @@
 class CommentsController < ApplicationController
 
   before_action :load_post
-  
+
   def create
     @comment = @post.comments.build(comment_params)
     @comment.user = current_user
 
+
     if @comment.save
       respond_to do |format|
-        format.html { redirect_to post_path(@comment),
-              notice: "You have successfully commented on this blog post" }
-        format.js {}
-        format.json { render json: @comment, status: :created }
+          format.html do
+            if request.xhr?
+              render @comment
+            else
+              redirect_to post_path(@post), notice: "Your comment was saved"
+            end
+          end
+      format.js
       end
     else
-      respond_to do |format|
-        format.html { render partial: "new_comment_form",
-              notice: "Sorry your comment was not saved" }
-        format.json { render 'new' }
-      end
+      render :new, notice: "Your comment was not saved. Please try again."
     end
   end
 
