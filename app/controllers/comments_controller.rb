@@ -11,36 +11,37 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to post_path(@post), notice: "You have successfully commented on this blog post"
+      respond_to do |format|
+        format.html { redirect_to post_path(@comment),
+              notice: "You have successfully commented on this blog post" }
+        format.js {}
+        format.json { render json: @comment, status: :created }
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render partial: "new_comment_form",
+              notice: "Sorry your comment was not saved" }
+        format.json { render 'new' }
+      end
     end
-
   end
 
-  def editx
+  def edit
     @comment = Comment.find(params[:id])
-
   end
 
   def updated
-
     @comment = Comment.find(params[:id])
-
     if comment.update_attributes(comment_params)
       redirect_to post_path(@post), notice: "You have successfully updated your comment"
     else
       render :edit
     end
-
   end
 
   def destory
-
     @comment = Comment.find(params[:id])
-
     @comment.destory
-
     redirect_to post_path(@post)
   end
 

@@ -1,24 +1,14 @@
-<div class="header">
-  <h1>blog post</h1>
-</div>
 
-<div class="post_list">
-    <h3><%= @post.title %></h3>
-    <ul>
-      <li>
-        <%= @post.blog_post %>
-      </li>
-    </ul>
-</div>
+<%= render @post %>
 
 <div>
 
   <h3>comments</h3>
 
-  <%= render "new_comment_form" %>
+  <%= render "comments/new_comment_form" %>
 
-  <% if @post.comments.any? %>
-    <%= render "comments" %>
-  <% end %>
+<div class="comment_list">
+  <%= render @comments %>
+</div>
 
 </div>
