@@ -1,13 +1,9 @@
 class CommentsController < ApplicationController
 
   before_action :load_post
-
-  def new
-    @comment = Comments.new
-  end
-
+  
   def create
-    @comment = Comments.new(comment_params)
+    @comment = @post.comments.build(comment_params)
     @comment.user = current_user
 
     if @comment.save
