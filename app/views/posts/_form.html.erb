@@ -1,6 +1,6 @@
 <div class="blog_form">
 
-  <%= form_for @post do | post | %>
+  <%= form_for @post, remote:true do | post | %>
 
     <div class="error_explanation">
       <% if @post.errors.any? %>
@@ -13,7 +13,7 @@
             <% end %>
           </ul>
     </div>
-   <% end %> 
+   <% end %>
 
      <div class="blog_form_input">
       <%= post.label :title, "Add Title" %>
