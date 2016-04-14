@@ -3,11 +3,11 @@ class CommentsController < ApplicationController
   before_action :load_post
 
   def new
-    @comment = @post.comments.new
+    @comment = Comments.new
   end
 
   def create
-    @comment = @post.comments.new(comment_params)
+    @comment = Comments.new(comment_params)
     @comment.user = current_user
 
     if @comment.save
