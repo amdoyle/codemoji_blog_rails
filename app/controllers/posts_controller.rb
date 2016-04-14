@@ -23,8 +23,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comment = @post.comments.build
     @comments = @post.comments
+    if current_user
+      @comment = Comment.new
+    end
   end
 
   def update
