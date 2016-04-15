@@ -2,7 +2,7 @@
   <p>
     <%= comment.comment %> <br />
     <% if comment.user != nil %>
-      Comment written by: <%= comment.user.first_name %>
-      added on: <%= comment.format_date %>
+      <%= comment.user.first_name %> <br />
+      <%= comment.format_date %>
     <% end %>
   </p>
