@@ -1,3 +1,7 @@
-<% @posts.each do |post| %>
-  <%= link_to post.title, "posts/#{post.id}", class:"post" %> <br />
+<% if @post != nil %>
+  <% @posts.each do |post| %>
+    <%= link_to post.title, "posts/#{post.id}", class:"post" %> <br />
+  <% end %>
+<% else %>
+  <p>No posts to display</p>
 <% end %>
