@@ -6,5 +6,6 @@ class Post < ActiveRecord::Base
   def self.show_format
     all.order(created_at: :desc).reject{ |post_last| post_last == Post.last}
   end
+  
 
 end
