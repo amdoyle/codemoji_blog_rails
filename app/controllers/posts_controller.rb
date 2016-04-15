@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.last
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.show_format
   end
 
   def new

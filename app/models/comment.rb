@@ -4,7 +4,7 @@ class Comment < ActiveRecord::Base
   belongs_to :user
 
   def format_date
-    created_at.strftime("%B %d,%y at %l:%M %p")
+    all.created_at.strftime("%B %d,%y at %l:%M %p")
   end
 
 end

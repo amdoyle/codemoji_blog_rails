@@ -3,8 +3,8 @@ class Post < ActiveRecord::Base
   has_many :comments
   validates :title, :blog_post, presence: true
 
-  def formatDate
-    time.strftime('%B %m %Y')
+  def self.show_format
+    all.order(created_at: :desc).reject{ |post_last| post_last == Post.last}
   end
 
 end
