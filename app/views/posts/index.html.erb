@@ -1,10 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6">
-      <% @posts.each do |blog| %>
-        <%= link_to blog.title, "posts/#{blog.id}", class:"post" %>
-        <p class="post"><%= blog.blog_post %></p>
-      <% end %>
+      <div class="new-post">
+        <%= render @posts %> 
+      </div>
     </div>
 
     <div class="container-fluid">

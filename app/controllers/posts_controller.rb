@@ -15,11 +15,20 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+
     if @post.save
-      redirect_to posts_url
+      respond_to do |format|
+        format.html do
+          if format.xhr?
+            render @post
+          end
+        end
+        format.js { render js: "window.location = '#{posts_url}';"}
+      end
     else
-      render :new
+      render :new, notice: "Sorry there was an error. Please try again."
     end
+
   end
 
   def show
