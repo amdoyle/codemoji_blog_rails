@@ -3,6 +3,6 @@
     <%= comment.comment %> <br />
     <% if comment.user != nil %>
       Comment written by: <%= comment.user.first_name %>
-      added on: <%= comment.created_at %>
+      added on: <%= comment.format_date %>
     <% end %>
   </p>

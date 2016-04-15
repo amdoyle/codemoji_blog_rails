@@ -3,4 +3,8 @@ class Post < ActiveRecord::Base
   has_many :comments
   validates :title, :blog_post, presence: true
 
+  def formatDate
+    time.strftime('%B %m %Y')
+  end
+
 end
