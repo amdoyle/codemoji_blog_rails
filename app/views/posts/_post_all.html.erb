@@ -1,4 +1,4 @@
-<% if @post != nil %>
+<% if @posts != nil %>
   <% @posts.each do |post| %>
     <%= link_to post.title, "posts/#{post.id}", class:"post" %> <br />
   <% end %>
