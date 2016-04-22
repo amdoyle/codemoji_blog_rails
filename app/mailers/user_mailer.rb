@@ -1,6 +1,7 @@
 class UserMailer < Devise::Mailer
   helper :application
-  include Devise::Controllers::UrlHelpers 
+  include Devise::Controllers::UrlHelpers
+  include DefaultUrlOptions
   default template_path: 'devise/mailer'
 
   def confirmation_instructions(record, token, opts={})
