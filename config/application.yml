@@ -12,3 +12,5 @@
 consumer_key: "IGu4PEQEBkhtMQHfK7Wghwn3N"
 consumer_secret: "TC4FZYWPe49SPTtbMIAVRwjx4jquxPYxdZOr9umWJI8Opoj2tT"
 callback: "http://0.0.0.0:9292/users/auth/twitter/callback"
+email_password: "Mattucci84"
+secret_key: '042c1e80d9db729225d4dbb5c951f578882c68eb563bf9d3e0a82d2e1deaceec25488002bab41009f72265e93dee895ffce29e6902c94e164404ec1b6b99bc43'
