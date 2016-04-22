@@ -10,7 +10,7 @@ module DefaultUrlOptions
 private
 
   def host
-    'http://localhost:3000/'
+    'https://ancient-island-27279.herokuapp.com/'
   end
 
   def port
