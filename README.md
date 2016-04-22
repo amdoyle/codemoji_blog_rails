@@ -23,6 +23,7 @@
 ###Next Steps
 * Update log in options to include Twitter.
 * Add more robust user profile page.
+* Include background jobs. 
 
 
 
