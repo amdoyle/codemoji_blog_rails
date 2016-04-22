@@ -37,7 +37,7 @@ source 'https://rails-assets.org' do
 end
 
 gem 'pg'
-
+gem 'social-share-button'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
