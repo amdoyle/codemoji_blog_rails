@@ -1,6 +1,6 @@
 <% if @post != nil %>
   <%= link_to @post.title, "posts/#{@post.id}", class:"post" %>
-  <%= social_share_button_tag(@post.title, popup: true, url: "http://localhost:3000/posts#{@post.id}") %>
+  <%= social_share_button_tag(@post.title, popup: true, url: "https://ancient-island-27279.herokuapp.com/posts#{@post.id}") %>
   <p class="post"><%= @post.blog_post %></p>
 <% else %>
   <p>New post coming soon.</p>
