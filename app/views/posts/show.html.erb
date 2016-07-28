@@ -8,7 +8,7 @@
   <%= render "comments/new_comment_form" %>
 
   <div class="comment_list">
-    <% if @post.comments != nill %>
+    <% if @post.comments != nil %>
       <%= render @post.comments %>
     <% end %>
   </div>
