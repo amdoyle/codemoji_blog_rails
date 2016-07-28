@@ -3,8 +3,9 @@ class CommentsController < ApplicationController
   before_action :load_post
 
   def create
+
     @comment = @post.comments.build(comment_params)
-    @comment.user = current_user
+    # @comment.user = current_user
 
 
     if @comment.save
@@ -21,6 +22,7 @@ class CommentsController < ApplicationController
     else
       render :new, notice: "Your comment was not saved. Please try again."
     end
+
   end
 
   def edit

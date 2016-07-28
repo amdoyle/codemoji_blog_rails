@@ -9,6 +9,11 @@
 
   <div class="comment_list">
     <% if @post.comments != nil %>
+        <p>No comments.
+          <% if !current_user %>
+            <%= link_to "Log In", new_user_session_path %> and be the first to leave a comment.</p>
+          <% end %>
+    <% else %>
       <%= render @post.comments %>
     <% end %>
   </div>
