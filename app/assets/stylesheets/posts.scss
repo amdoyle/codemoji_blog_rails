@@ -146,6 +146,9 @@ p {
     }
   }
 
+.posts_all h2 {
+  text-align: left;
+}
 /* New post */
 form#new_post {
   font-family: $login-stack;

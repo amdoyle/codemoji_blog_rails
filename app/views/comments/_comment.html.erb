@@ -1,4 +1,4 @@
-
+<% if @post.comment != nil %>
   <p>
     <%= comment.comment %> <br />
     <% if comment.user != nil %>
@@ -6,3 +6,4 @@
       <%= comment.format_date %>
     <% end %>
   </p>
+<% end%>
